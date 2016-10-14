@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>240dB</title>
+
+		<meta name="description" content="">
+		<meta name="author" content="Nicholas Martins">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+ 		<link rel="stylesheet" href="css/animate.css/animate.min.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<!--<script src=""></script> -->
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/default.min.css">
+		<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
+    	<script src="http://127.0.0.1:8000/socket.io/socket.io.js"></script>
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<!-- Printing and PDF exports -->
+		<script>
+$(document).ready(function(){
+    $("tw").click(function(){
+        $(this).hide();
+    });
+});
+</script>
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+<style>
+
+
+.modalDialog {
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+}
+.modalDialog:target {
+	opacity:1;
+	pointer-events: auto;
+}
+
+.modalDialog > div {
+	width: 400px;
+	position: relative;
+	margin: 10% auto;
+	padding: 5px 20px 13px 20px;
+	border-radius: 10px;
+	background: #fff;
+	background: -moz-linear-gradient(#fff, #999);
+	background: -webkit-linear-gradient(#fff, #999);
+	background: -o-linear-gradient(#fff, #999);
+}
+.dropbtn {
+    color: white;
+    padding: 6px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+	bottom: 100%;
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 6px 14px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 6px 14px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {-webkit-stroke-width: 5.3px;
+      -webkit-stroke-color: #FFFFFF;
+      -webkit-fill-color: #FFFFFF;
+      text-shadow: 1px 0px 20px yellow;
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    -webkit-stroke-width: 5.3px;
+      -webkit-stroke-color: #FFFFFF;
+      -webkit-fill-color: #FFFFFF;
+      text-shadow: 1px 0px 20px yellow;
+}
+</style>
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide
+
+			VIDEO BACKGROUND model
+			<section data-background-video="https://www.dropbox.com/s/0z7nxs64xnqfuii/moon.mp4?raw=1">
+
+				// This is the div function to create a block layer over the background video for text/instructions
+						<div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+							<h2>Video Backgrounds</h2>
+							<pre><code style="word-wrap: break-word;">&lt;section data-background-video="Snow.mp4"&gt;</code></pre>
+						</div>
+					</section>
+			 -->
+
+			<!-- HOME -->
+			<div class="slides">
+				<div></div>
+			
+				<!-- Background video and Header -->
+				<section data-background-video="vid/OiBia_1.mp4,vid/pika.mp4,vid/po.mp4" data-background-video-loop data-background-video-muted data-background-color="#000000">	
+					<h1>240</h1><font size ="7">d<font size ="3">eci</font></font><h1>Bell</h1><br>
+					
+
+
+
+
+				</br><br></br>
+				<!-- WEBSITE MENU -->
+			<div class="dropdown">
+			  <a href="#openModal"><font class="dropbtn" >A&nbsp;B&nbsp;O&nbsp;U&nbsp;T</font></a>
+			</font>
+			<div id="openModal" class="modalDialog">
+				<div>
+						</div>
+			</div>
+			</div>
+			
+			<div class="dropdown">
+			  <font class="dropbtn">A&nbsp;L&nbsp;B&nbsp;U&nbsp;M</font>
+			  <div class="dropdown-content"><font size ="3">
+			    <a href="#/1">1. Rollercoaster</a>
+			    <a href="#/2">2. Pikachu</a>
+			    <a href="#/3">3. Don't Fall (feat. Jacob Collier)</a>
+			    <a href="#/4">4. Prisms: A Whale Song for Rescue</a>
+			    <a href="#/5">5. Music is not a cheesecake!</a>
+			  </div></font>
+			</div>
+			
+								
+			<div class="dropdown">
+			  <font class="dropbtn">P&nbsp;R&nbsp;E&nbsp;S&nbsp;S</font>
+			  <div class="dropdown-content"><font size ="3">
+			    <a href="#">Release</a>
+			    <a href="#">Photos</a>
+			    <a href="#">Clipping</a>
+			  </div></font>
+			</div>
+			
+			<div class="dropdown">
+			 <c href="mailto:nicktup@gmail.com"><font class="dropbtn">C&nbsp;O&nbsp;N&nbsp;T&nbsp;A&nbsp;C&nbsp;T</font></c>
+			
+			</div>
+			<div class="dropdown">
+			<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a></a></div>
+			<br></br>
+
+							<!-- SOCIAL MENU -->
+			<div class="dropdown">
+				<a href="https://soundcloud.com/240dB">
+					<img width="36" height="20" data-src="img/sc_white_76x40.png">
+				</a> </div>&nbsp;&nbsp;
+
+
+			<div class="dropdown">
+			<a href="https://facebook.com/240dB">
+				<img width="20" height="20" data-src="img/FB-f-Logo__white_58.png">
+				</a> </div>&nbsp;&nbsp;
+
+
+				
+			<div class="dropdown">
+			<a href="https://facebook.com/nicktup">
+				<img width="23" height="23" data-src="img/snap-ghost.png">
+				</a> </div>&nbsp;&nbsp;
+
+				<div class="dropdown">
+			<a href="https://instagram.com/240dB">
+				<img width="23" height="23" data-src="img/insta.png">
+				</a> </div>&nbsp;&nbsp;
+			
+							<div class="dropdown">
+			<a href="https://facebook.com/nicktup">
+				<img width="23" height="23" data-src="img/Youtube.png">
+				</a> </div>&nbsp;&nbsp;
+			
+
+				<div class="dropdown">
+			<a href="https://facebook.com/nicktup">
+				<img width="23" height="23" data-src="img/Spotify_Logo.png">
+				</a> </div>&nbsp;&nbsp;
+			
+
+				<div class="dropdown">
+			<a href="https://facebook.com/240dB">
+				<img width="22" height="22" data-src="img/patreon_logo_black.png">
+				</a> </div>&nbsp;&nbsp;
+			
+			
+
+				<div class="dropdown">
+			<a href="https://facebook.com/240dB">
+				<img width="62" height="22" data-src="img/240dBlogo_var_white.png">
+				</a> </div>&nbsp;&nbsp;
+
+						<div class="dropdown">
+			<a href="https://facebook.com/nicktup">
+				<img width="63" height="24" data-src="img/Pre-order_on_iTunes_Badge_US-UK_0614.svg">
+				</a> </div>&nbsp;&nbsp;
+
+						
+
+
+
+<!--
+					 <p><small><div>
+						<br><br><br><div><font class="animated infinite flash" size= "3" color="white" face="Verdana">
+						SONG LIST FOR THE ALBUM BELOW<br></font><font size="2"></div>
+
+						<a href="#/1">1 - Rollercoaster </a>
+						&nbsp;
+						
+							<a href="#/2">2 - Pikachu </a>
+
+						&nbsp;
+					
+							<a href="#/3">3 - Don't Fall In Love</a>
+
+						&nbsp;
+						
+							<a href="#/4">4 - Prisms: Canto das Baleias</a>
+
+						&nbsp;
+						
+							<a href="#/5">5 - Mats Morgan/Hermeto Song</a>
+
+</font></div>
+					</small></p> -->
+				
+				</section>	
+				<!-- Week 1 nested -->
+				<section data-transition="zoom">	
+				<section data-background-video="vid/poxa.mp4" data-background-video-muted data-background-video-loop data-background-color="#000000">	
+					<h1><font color="orange">Rollercoaster</h1></font><br></br><br></br><br></br><br></br>
+							<p><small><font color="brown">A video presentation will load shortly, please wait or go to the next slide</font></small></p>
+							<audio data-autoplay src="audio/rollercoaster.mp3"></audio>
+					<a href="#" class="navigate-down">
+						</a>
+				</section>
+					<a href="#" class="navigate-down">
+						</a>
+				</section>
+				</section>	
+
+				<!-- Week 2 -->
+				<section>
+				<section data-background-video="vid/IMG_0328.mp4" data-background-video-muted data-background-video-loop data-background-color="#000000">
+							<h1>Pikachu</h1><br></br><br></br><br><br></br><br></br><br></br>
+							<audio data-autoplay src="audio/Pikachu.mp3"></audio>
+						<div style="background-color: rgba(0, 0, 0, 0.6); color: #fff; padding: 2px;">	
+						<font size ="4"color="brown">
+					All sounds were made using Pikachu's voice, applications used (Spear, Cecilia 4, Cecilia 5, Csound, Max for Live). </font></p></div>
+
+					<a href="#" class="navigate-down">
+						</a>
+					</section>
+					<section data-background-video="vid/Backend_Website.mp4">
+						<div style="background-color: rgba(0, 0, 0, 0.5); color: #fff; padding: 20px;"><h3>Objective C, Swift, Arduino and iOS</h3>
+						<p><small>
+                         Turning more on the software side of things, I am wanting to incorporate my skills with Swift and Objective C to make communication to an Arduino which will send sensor input to the app and play sounds, much like a drum trigger or similar music technology tool.
+
+						<br>
+						<br>
+						I am trying to incorporate a microcontroller AtMega328 with an iPad Air by Apple using a redspark cable to do all the serial communication.
+						
+						<br>
+						<br>
+						[youtube=http://www.youtube.com/watch?v=8jpdXAPpR5A&w=640&h=320]
+						
+						<br>
+						<br>
+						The microcontroller will give control to any iOS 8 device (iPhone, iPad brands) and it will receive signal coming from sensors (piezo transducers) in the analog inputs, the code converts these inputs as mere messages for triggering events and buttons that will happen in the device, like playing a sound, processing its pitch through a slow phase vocoder or record a sound and process it…
+
+						<br><br>
+						http://vimeo.com/118180151
+						<br></br>
+						My idea is to make a wearable device that can hook up to your phone, while you put the device to it, you can listen to it through the headphone jack. All the hardware is from your actual phone or tablet, my device is simply the UI which you wear.
+
+						</small></p></div>
+
+					<a href="#" class="navigate-down">
+						</a>
+					</section>
+					
+					</section>
+				</section>
+				<!-- Week 3 -->
+			<section>
+				<section data-background-video="vid/OiBia_1.mp4" data-background-video-muted data-background-video-loop data-background-color="#000000">	
+							<h1>Don't Fall In Love</h1><br></br><br></br><br></br><br></br>
+							<audio data-autoplay src="audio/Dont_Fall_In_Love.mp3"></audio>
+							<p><small><font color="white">Don't Fall in Love Feat. Jacob Colier, Lallah Hathaway</font></small></p>
+							
+					<a href="#" class="navigate-down">
+						</a>
+					</section>
+					<section data-background-video="vid/po.mp4" data-background-video-muted data-background-video-loop>
+						Guests<br>
+						<img width="113" height="113" data-src="img/cropped/Basil_Simon.png">
+
+						<img width="113" height="113" data-src="img/cropped/Bianca_Godoi.png">
+
+						<img width="113" height="113" data-src="img/cropped/Gabriel_Barbosa.png">
+
+						<img width="113" height="113" data-src="img/cropped/Chatchon.png">
+
+						<img width="113" height="113" data-src="img/cropped/Travis_Yee.jpg">
+
+						<img width="113" height="113" data-src="img/cropped/Cayo_Carignani.jpg">
+
+						<img width="113" height="113" data-src="img/cropped/Daniel_Feldman.jpg">
+
+						<img width="113" height="113" data-src="img/cropped/Corey_Henry.jpg">
+
+						<img width="113" height="113" data-src="img/cropped/Eduardo_Louro.png">
+
+						<img width="113" height="113" data-src="img/cropped/Felipe_Dunin.jpg">
+
+						<img width="113" height="113" data-src="img/cropped/Fernando_Souza.jpg">
+
+						<img width="113" height="113" data-src="img/cropped/Hathaway.png">
+
+						<img width="113" height="113" data-src="img/cropped/Hermeto_Pascoal.png">
+
+						<img width="113" height="113" data-src="img/cropped/Jacob_Collier.jpg">
+
+						<img width="113" height="113" data-src="img/cropped/Jano_Manzali.jpg">
+
+						<img width="113" height="113" data-src="img/cropped/Joyce_Martins.png">
+
+						<img width="113" height="113" data-src="img/cropped/Kauai_Moliterno.jpg">
+
+						<img width="113" height="113" data-src="img/cropped/Leonardo_Rezende.png">
+
+						<img width="113" height="113" data-src="img/cropped/Manu_Miranda.png">
+
+						<img width="113" height="113" data-src="img/cropped/Mats_Morgan.png">
+
+						<img width="113" height="113" data-src="img/cropped/Matt_Collura.png">
+
+						<img width="113" height="113" data-src="img/cropped/Mauricio_Lustosa.png">
+
+						<img width="113" height="113" data-src="img/cropped/Myles_Davis.png">
+
+						<img width="113" height="113" data-src="img/cropped/Nicholas_Martins.png">
+
+						<img width="113" height="113" data-src="img/cropped/Noam_Chomsky,_2004.png">
+
+						<img width="113" height="113" data-src="img/cropped/Stephen_Bruner.jpg">
+
+						<img width="113" height="113" data-src="img/cropped/Stephen_Croes.jpg">
+
+						<img width="113" height="113" data-src="img/cropped/Vinicius_Cavalieri.png">
+
+						<img width="113" height="113" data-src="img/cropped/Wes_Yee.jpg">
+
+
+
+					</section>
+				</section>
+
+
+				<!-- Week 4 -->
+
+					<section data-background-video="vid/po.mp4">
+					<h1><font color="orange">Prisms</h1><br></br><br></br><br></br><br></br><br></br><div style="background-color:  rgba(0, 0, 0, 0.2); color: #fff; padding: .01px;">
+					<p><small>A whale song for rescue</small></p></font></div>
+					<a href="#" class="navigate-down">
+						</a>
+
+				</section>
+
+				</section>
+
+
+				
+				<!-- Week 5 -->
+			<section><section data-background-video="vid/moon.mp4">
+
+							<div style="background-color: rgba(0, 0, 0, 0.2); color: #fff; padding: 20px;"><h1>Music is not a cheesecake!</h1>
+							<p><small><font color="orange">Feat. Mats/Morgan and Hermeto Pascoal (Itibere Orquestra and Friends)</font></small></p></div><br>
+							
+					<a href="#" class="navigate-down">
+						</a>
+					</section>
+
+				
+				</section>
+
+
+				<!-- Week 6 Touch OSC -->
+				
+					<section data-background-video="vid/4ray-collective.mp4">
+						<h3><font color="black">Live code timelapse on 4ray!</h3></font>
+
+						<p><small><font color="black">Check the progress on Raspberry Pi system live @</font> <a href="http://ether.4ray.co/p/Rollercoaster_Pi_Csound">Rollercoaster Colletive 4ray</a> </small></p>
+
+					</section>	
+				</section>
+
+				<!-- Week 7 Touch OSC + Leap Motion -->
+				
+
+
+
+
+			
+				<section data-background-video="vid/reverse-timelapse.mp4" data-background-color="#000000" style="text-align: left;">
+					<h1>that was all, thanks ;)</h1>
+					<h3><font size="3">Keep posted next week for more</h3></font>
+					<p>
+						- <a href="https://nicktupmusic.wordpress.com">NickTup Music Wordpress</a> <br>
+						- <a href="https://soundcloud.com/nicktup">Soundcloud page</a>
+					</p>
+				</section>
+				
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: false,
+				progress: true,
+				history: true,
+				center: true,
+
+   				 // Loop the presentation
+   				 loop: true,
+
+
+				transition: 'fade', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
